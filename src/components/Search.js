@@ -13,9 +13,10 @@ const StyledSearch = styled.div`
   position: fixed;
   > input {
     height: 2rem;
+    max-width: 30rem;
     transition: width 1s;
     width: 0;
-    ${(props) => props.showSearch && "width: 30rem;"}
+    ${(props) => props.showSearch && "width: calc(100vw - 82px);"}
   }
 `;
 

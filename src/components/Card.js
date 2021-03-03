@@ -7,16 +7,24 @@ import styled from "styled-components";
 import { Entry } from "./Card/Text/Entry";
 
 const StyledCard = styled(MuiCard)`
-  border: 1rem solid gold;
+  border: 0.5rem solid gold;
   width: 20rem;
   height: 40rem;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 600px) {
+    .MuiTypography-body1 {
+      /* This would ideally be done with theming */
+      font-size: 0.9rem;
+    }
+  }
 `;
 
 const StyledImage = styled(CardMedia)`
-  width: 20rem;
-  height: 30rem;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
   && {
     background-size: contain;
   }

@@ -14,7 +14,7 @@ const CardsLayout = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5rem;
+  padding: 5rem 2rem;
   gap: 5rem;
 `;
 
