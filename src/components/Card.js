@@ -15,7 +15,7 @@ const StyledCard = styled(MuiCard)`
 
   @media only screen and (max-width: 600px) {
     .MuiTypography-body1 {
-      /* This would ideally be done with theming */
+      /* TODO: This would ideally be done with theming */
       font-size: 0.9rem;
     }
   }
