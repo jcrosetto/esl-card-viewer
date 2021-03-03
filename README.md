@@ -1,4 +1,4 @@
-# Running the Elder Scrolls Online Card Viewer
+# Running the Elder Scrolls Legends Card Viewer
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
