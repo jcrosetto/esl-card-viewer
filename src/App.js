@@ -53,8 +53,7 @@ function App() {
     }
 
     apiUrl.search = new URLSearchParams(params);
-    console.log(apiUrl);
-    console.log(search, page, hasMore, scrollPosition, fetching);
+
     if (
       !fetching &&
       hasMore &&
@@ -66,7 +65,6 @@ function App() {
       fetch(apiUrl)
         .then((response) => response.json())
         .then(({ cards: newCards }) => {
-          console.log(newCards);
           if (newCards.length < 20) {
             setHasMore(false);
           }
@@ -82,6 +80,8 @@ function App() {
     setPage(1);
     setHasMore(true);
     setCards([]);
+
+    // Update the URL. Refresh will maintain current search and can be bookmarked!
     const updatedSearch = new URL(window.location.origin);
     updatedSearch.search = text ? new URLSearchParams({ search: text }) : null;
     window.history.replaceState(null, "", updatedSearch);
